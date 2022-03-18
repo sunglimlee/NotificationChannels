@@ -55,6 +55,7 @@ class NotificationHelper(base: Context?) : ContextWrapper(base) {
     public fun getManager() : NotificationManager {
         if (mManager == null) {
             //getSystemService를 통해서 NotificationManager를 받을 수 있구나.
+                //이부분 정말 중요하다.
             mManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         }
         return mManager as NotificationManager
